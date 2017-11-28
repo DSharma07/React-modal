@@ -131,7 +131,7 @@ export default class TransactionDetails extends React.Component {
           <TableHeaderColumn dataField='id' isKey={ true } dataSort={ true }>ID</TableHeaderColumn>
           <TableHeaderColumn dataField='amount' dataSort={ true }>Amount</TableHeaderColumn>
           <TableHeaderColumn dataField='type' dataSort={ true }>Type</TableHeaderColumn>
-          <TableHeaderColumn ref='nameCol' dataField='date' dataFormat={ dateFormatter }>Date</TableHeaderColumn>
+          <TableHeaderColumn ref='nameCol' dataField='date' dataFormat={ dateFormatter } dataSort={ true }>Date</TableHeaderColumn>
         </BootstrapTable>
       </div>
     );
