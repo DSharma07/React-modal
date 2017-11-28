@@ -14,5 +14,6 @@
 - Click on any member, detail view modal will open.
 - Details View modal will display member firstname, lastname and email on top.
 - Details view modal will display transactions of specific member in tabular format.
-- Table features : Searching, Sorting, filtering (date), pagination, export to csv.
-- A filter (start date & end date) is present to filter the results.
+- Table features : Sorting, filtering (start date & end date), pagination, export to csv.
+- Details view modal will display graph of transactions based on type.
+- Modal scrollbar is present to scroll the modal window.
