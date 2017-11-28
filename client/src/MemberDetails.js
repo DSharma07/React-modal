@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import TransactionDetails from './TransactionDetails';
+import GraphDetails from './Graph';
 
 class MemberDetails extends React.Component {
 
@@ -21,16 +22,18 @@ class MemberDetails extends React.Component {
     left: 0px;
     right: 0px;
     background-color: rgba(0,0,0,0.3);
-    padding: 50px
+    padding: 50px;
+    
     `
 
     const StyledModal = styled.div`
     border-radius: 5px;
     max-width: 100%;
-    min-height: 90%;
+    height: 100%;
     margin: 0px auto;
     padding: 45px;
     background-color: #fff;
+    overflow-y: scroll;
     `
 
     const StyledName = styled.h3`
@@ -53,6 +56,8 @@ class MemberDetails extends React.Component {
         <StyledName>{this.props.member.first_name}&nbsp;{this.props.member.last_name}</StyledName> 
          <StyledMail><br></br>{this.props.member.email}</StyledMail><hr />
           <TransactionDetails memberId={this.props.member.id}/>
+          <hr/>
+          <GraphDetails memberId={this.props.member.id} />
         </StyledModal>
       </StyledBackdrop>
     );

@@ -10,6 +10,9 @@ router.get('/aye', (req, res) => {
     res.send('aye aye');
 });
 
+
+
+
 router.get('/list-members', (req, res) => {
     MemberModel
         .find({})
@@ -55,11 +58,11 @@ router.get('/transactions/:id', (req, res) => {
 router.get('/graph/:id', (req, res) => {
     var id = req.params.id;
     TransactionsModel
-        .aggregate([{"$match":{"member":mongoose.Types.ObjectId(id)}},{"$group":{_id:{$month:"$date"},details: {$push:{ type: "$type", amount: "$amount", id: "$_id", date: "$date" }}}}])
+        .aggregate([{"$match":{"member":mongoose.Types.ObjectId(id)}},{"$group":{_id:"$type",details: {$push:{ type: "$type", amount: "$amount", id: "$_id", month: { $month: "$date" } }}}}])
         .then(transactions => {
             const mappedTransactions = transactions.map(transaction => {
                 return {
-                    month: transaction._id,
+                    type: transaction._id,
                     details : transaction.details
                 };
             });

@@ -4,11 +4,12 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.0",
+    "chart.js": "^2.7.1",
     "react": "^16.0.0",
     "react-bootstrap-table": "^4.1.5",
+    "react-chartjs-2": "^2.6.4",
     "react-datepicker": "^0.61.0",
     "react-dom": "^16.0.0",
-    "react-linechart": "^1.1.12",
     "react-scripts": "1.0.14",
     "styled-components": "^2.2.1"
   },
