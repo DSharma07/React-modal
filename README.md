@@ -16,4 +16,5 @@
 - Details view modal will display transactions of specific member in tabular format.
 - Table features : Sorting, filtering (start date & end date), pagination, export to csv.
 - Details view modal will display graph of transactions based on type.
+- for a given month, if more than one value exist of same type then graph shows the sum of values. 
 - Modal scrollbar is present to scroll the modal window.
